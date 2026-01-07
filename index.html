@@ -103,21 +103,6 @@
   </style>
 </head>
 <body>
-<script>
-  let index = 0;
-  const slides = document.querySelector('.slides');
-  const total = document.querySelectorAll('.slides img').length;
-
-  function moveSlide(step) {
-    index = (index + step + total) % total;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  setInterval(() => {
-    moveSlide(1);
-  }, 5000);
-</script>
-  
 <header>
   <h1>SANCHEZ</h1>
   <p>Repairs & Maintenance LLC</p>
@@ -176,6 +161,20 @@
 <footer>
   © 2026 Sanchez Repairs & Maintenance LLC. All Rights Reserved.
 </footer>
+<script>
+  let index = 0;
+  const slides = document.querySelector('.slides');
+  const total = document.querySelectorAll('.slides img').length;
+
+  function moveSlide(step) {
+    index = (index + step + total) % total;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(() => {
+    moveSlide(1);
+  }, 5000);
+</script>
 
 </body>
 </html>
