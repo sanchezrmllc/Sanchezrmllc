@@ -4,39 +4,6 @@
   <meta charset="UTF-8">
   <title>Sanchez Repairs & Maintenance LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  .slider {
-  position: relative;
-  max-width: 900px;
-  margin: 40px auto;
-  border: 3px solid gold;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-
-.slides img {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: gold;
-  border: none;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-  
-.prev { left: 10px; }
-.next { right: 10px; }
   <style>
     body {
       margin: 0;
@@ -100,6 +67,39 @@
       font-size: 14px;
       color: #aaa;
     }
+    .slider {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  border: 3px solid gold;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: gold;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+  
+.prev { left: 10px; }
+.next { right: 10px; }
   </style>
 </head>
 <body>
