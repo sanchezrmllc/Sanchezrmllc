@@ -196,14 +196,30 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+  .logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.logo img {
+  height: 60px;
+}
 </style>
 
 </head>
 <body>
-<header>
+<header style="position: relative;">
+  <div class="logo">
+    <img src="logo.png" alt="Sanchez Repairs & Maintenance LLC">
+  </div>
+
   <h1>SANCHEZ</h1>
-  <p>Repairs & Maintenance LLC</p>
-  <p>Serving New York City, New Jersey & Nearby Areas</p>
+  <p>
+    Repairs & Maintenance LLC<br>
+    Professional Construction & Property Services<br>
+    New York City • New Jersey • Surrounding Areas
+  </p>
   <button class="cta-btn" onclick="openForm()">Request an Estimate</button>
 </header>
   
