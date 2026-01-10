@@ -225,6 +225,44 @@ footer {
   color: var(--light);
   border-top: 2px solid var(--gold);
 }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1f2630;
+  max-width: 900px;
+  width: 90%;
+  padding: 25px;
+  border-radius: 12px;
+  border: 3px solid var(--gold);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.modal-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.close-modal {
+  color: var(--gold);
+  font-size: 28px;
+  cursor: pointer;
+  text-align: right;
+}
 </style>
 
 </head>
@@ -256,12 +294,14 @@ footer {
 From small repairs to full renovations, we handle a wide range of residential
 and commercial projects with attention to detail and professional execution.
 </p>
-<div class="category-card fade-up">
+<div class="category-card fade-up" onclick="openModal('Remodeling')">
   <img src="cat-remodeling.jpg">
-  <div class="category-title">
-    Remodeling<br>
-    <small>Residential & Commercial</small>
-  </div>
+  <div class="category-title">Remodeling</div>
+</div>
+<div class="category-card fade-up" onclick="openModal('Painting')">
+  <img src="cat-remodeling.jpg">
+  <div class="category-title">Remodeling</div>
+</div>
 </section>
 
 <section class="contact">
@@ -364,6 +404,62 @@ function closeForm() {
   document.getElementById('contactForm').style.display = 'none';
 }
 </script>
+  <script>
+const projects = {
+  remodeling: [
+    'remodel1.jpg',
+    'remodel2.jpg',
+    'remodel3.jpg'
+  ],
+  painting: [
+    'paint1.jpg',
+    'paint2.jpg',
+    'paint3.jpg'
+  ],
+  electrical: [
+    'electric1.jpg',
+    'electric2.jpg'
+  ],
+  plumbing: [
+    'plumb1.jpg',
+    'plumb2.jpg'
+  ],
+  maintenance: [
+    'maint1.jpg',
+    'maint2.jpg'
+  ]
+};
 
+function openModal(category) {
+  const modal = document.getElementById('projectModal');
+  const title = document.getElementById('modalTitle');
+  const container = document.getElementById('modalImages');
+
+  title.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+  container.innerHTML = '';
+
+  projects[category].forEach(img => {
+    const image = document.createElement('img');
+    image.src = img;
+    container.appendChild(image);
+  });
+
+  modal.style.display = 'flex';
+}
+
+function closeModal(e) {
+  if (!e || e.target.classList.contains('modal')) {
+    document.getElementById('projectModal').style.display = 'none';
+  }
+}
+</script>
+
+<div id="projectModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <div class="close-modal" onclick="closeModal()">✕</div>
+    <h2 id="modalTitle"></h2>
+    <div class="modal-grid" id="modalImages"></div>
+  </div>
+</div>
 </body>
 </html>
