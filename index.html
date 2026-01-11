@@ -332,14 +332,18 @@ footer {
   transform: translateY(-2px);
 }
 .who-we-are {
-  background: linear-gradient(
-      rgba(58,69,84,0.88),
-      rgba(58,69,84,0.88)
-    ),
-    url('backgroud top.jpeg') center/cover no-repeat;
-  color: #fff;
-  padding: 80px 20px;
+  background-image:
+    linear-gradient(rgba(58,69,84,0.85), rgba(58,69,84,0.85)),
+    url('backgroud top.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  padding: 90px 20px;
   text-align: center;
+}
+
 }
 @media (max-width: 768px) {
   .who-we-are {
