@@ -331,7 +331,20 @@ footer {
   background: #c9a24d; /* slightly darker gold on hover */
   transform: translateY(-2px);
 }
-
+.who-we-are {
+  background: linear-gradient(
+      rgba(58,69,84,0.88),
+      rgba(58,69,84,0.88)
+    ),
+    url('about-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .who-we-are {
+    padding: 100px 15px;
+  }
 </style>
 
 </head>
@@ -350,12 +363,13 @@ footer {
   <button class="cta-btn" onclick="openForm()">Request an Estimate</button>
 </header>
   
-  <section>
-  <h2>Who we are</h2>
+  <section class="who-we-are">
+  <h2>Who We Are</h2>
   <p>
-        Sanchez Repairs & Maintenance LLC is a trusted construction and maintenance company with over 15 years of experience delivering reliable residential and commercial services. We are committed to high-quality workmanship, clear communication, and results that meet our clients’ expectations. Serving New York City, New Jersey, and surrounding areas, we focus on solutions that last while offering flexible pricing options designed to fit different project needs and budgets. Our goal is simple: complete every job correctly, efficiently, and to the customer’s satisfaction.
+    Sanchez Repairs & Maintenance LLC is a trusted construction and maintenance company with over 15 years of experience delivering reliable residential and commercial services. We are committed to high-quality workmanship, clear communication, and results that meet our clients’ expectations. Serving New York City, New Jersey, and surrounding areas, we focus on solutions that last while offering flexible pricing options designed to fit different project needs and budgets. Our goal is simple: complete every job correctly, efficiently, and to the customer’s satisfaction.
   </p>
 </section>
+
 
 <section>
     <h2>Our Work & Services</h2>
