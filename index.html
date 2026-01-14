@@ -442,22 +442,21 @@ footer {
   </p>
   
 <div class="categories">
-    <div class="category-card fade-up" onclick="openModal('remodeling')">
-      <img src="lock placement.jpeg" alt="Kitchen Remodeling">
-      <div class="category-title">Kitchen Remodeling</div>
-    </div>
-  
-  <div class="categories">
-    <div class="category-card fade-up" onclick="openModal('remodeling')">
-      <img src="kitchen re.jpeg" alt="Kitchen Remodeling">
-      <div class="category-title">Kitchen Remodeling</div>
-    </div>
-
-    <div class="category-card fade-up" onclick="openModal('painting')">
-      <img src="wood stairs0027.jpeg" alt="Stairs Work">
-      <div class="category-title">Stairs Work</div>
-    </div>
+  <div class="category-card fade-up" onclick="openModal('remodeling')">
+    <img src="lock placement.jpeg" alt="Kitchen Remodeling">
+    <div class="category-title">Kitchen Remodeling</div>
   </div>
+
+  <div class="category-card fade-up" onclick="openModal('remodeling')">
+    <img src="kitchen re.jpeg" alt="Kitchen Remodeling">
+    <div class="category-title">Kitchen Remodeling</div>
+  </div>
+
+  <div class="category-card fade-up" onclick="openModal('painting')">
+    <img src="wood stairs0027.jpeg" alt="Stairs Work">
+    <div class="category-title">Stairs Work</div>
+  </div>
+</div>
 </section>
 
   
@@ -466,11 +465,11 @@ footer {
 
   <div class="slider" style="position:relative;">
     <div class="slides">
-
+      
       <div class="slide">
         <img src="IMG_4388.jpeg" alt="Project 1">
         <div class="caption">
-          <strong> Kytchen Renovation - Tile Installation – NYC </strong><br>
+          <strong>Kitchen Renovation – Tile Installation – NYC</strong>
           Full remodeling including Tile, flooring
         </div>
       </div>
@@ -690,6 +689,12 @@ function closeReviewModal(e) {
     </form>
   </div>
 </div>
-
+<div id="projectModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <div class="close-modal" onclick="closeModal()">✕</div>
+    <h2 id="modalTitle"></h2>
+    <div id="modalImages" class="modal-grid"></div>
+  </div>
+</div>
 </body>
 </html>
